@@ -5,7 +5,7 @@ function Rain() {
           drops.push(<div key={`${className}-${i}`} className={`raindrop ${className}`} style={{
             left: `${Math.random() * 100}vw`,
             animationDelay: `${-Math.random() * 2}s`,
-            animationDuration: `${0.75 + Math.random() * 2}s`,
+            animationDuration: `${0.6 + Math.random() * 2}s`,
             opacity: opacity
           }}></div>);
         }
