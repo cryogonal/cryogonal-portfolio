@@ -4,74 +4,89 @@ import '../index.css'
 function Header() {
     const [activeTab, setActiveTab] = useState(null);
     const [isPanelOn, setIsPanelOn] = useState(false);
+    const [hasClickedPanel, setHasClickedPanel] = useState(false);
 
     const handleTabClick = (tab) => {
         setIsPanelOn(true);
         setActiveTab(tab);
     }
 
-    return (
-        <>
-            <div className = "header-signs-container">
-                <div className="neon-sign">
-                    Brandon
-                </div>
-                <div className="broken-neon-sign">
-                    Hui
-                </div>
-            </div>
-            <div className="holo-panel-container">
-                {activeTab && (
-                <div className={`holo-panel ${isPanelOn ? 'on' : 'off'}`}>
-                    {activeTab === 'experience' && (
-                        <div className = "panel-content">
-                            <h2>experience</h2>
-                            <p>—— Software Engineer for RAS@Pitt ——</p>
-                            <p1>Developing and simulating a rover with ROS 2 Humble, C++ and Python.</p1>
-                            <p>Collaborated with multiple different mechanical and electrical engineers to integrate software with hardware.</p>
+    const handlePanelClick = (tab) => {
+        if (!hasClickedPanel) {
+            setIsPanelOn(true);
+            setHasClickedPanel(true);
+            setActiveTab('experience');
+        }
+    }
 
-                            <p2>—— Software Developer for ScottyLabs @ CMU ——</p2>
-                            <p>Developing a finance portal utilizing Python, Flask, NodeJS, Puppeteer, and Redis for backend, React for frontend, and PostgreSQL for the database.</p>
-                            <p>Working with peers from both Pitt and CMU to develop and test software.</p>
+    return (
+    <>
+        <div className="header-signs-container">
+            <div className="neon-sign">Brandon</div>
+            <div className="broken-neon-sign">Hui</div>
+        </div>
+
+        <div className="holo-panel-container">
+            <div
+                className={`holo-panel ${isPanelOn ? 'on' : 'off'}`}
+                onClick={!hasClickedPanel ? handlePanelClick : undefined}
+                style={{ cursor: !hasClickedPanel ? 'pointer' : 'default' }}
+            >
+
+                {hasClickedPanel && (
+                    <>
+                        <div className="panel-inner">
+                            <div className="panel-content">
+                                {activeTab === 'experience' && (
+                                <>
+                                    <h2>experience</h2>
+                                    <p>—— Software Engineer for RAS@Pitt ——</p>
+                                    <p>Developing and simulating a rover with ROS 2 Humble, C++ and Python.</p>
+                                    <p>Collaborated with mechanical and electrical engineers to integrate software with hardware.</p>
+                                    <p>—— Software Developer for ScottyLabs @ CMU ——</p>
+                                    <p>Developing a finance portal utilizing Python, Flask, NodeJS, Puppeteer, and Redis for backend, React for frontend, and PostgreSQL for the database.</p>
+                                    <p>Working with peers from both Pitt and CMU to develop and test software.</p>
+                                </>
+                                )}
+                                {activeTab === 'about' && (
+                                <>
+                                    <h2>about me</h2>
+                                    <p>Hey! I'm Brandon Hui, a junior at the University of Pittsburgh studying computer science and philosophy. I dream of working in software, focusing on backend development, IT, and AI.</p>
+                                    <p>Outside of programming, I love to play video games, discover new music, and hang out with friends! I've recently been addicted to Terraria and am currently trying to complete the Calamity mod.</p>
+                                    <p>Hope you enjoy looking around!</p>
+                                </>
+                                )}
+                                {activeTab === 'contact' && (
+                                <>
+                                    <h2>contact me</h2>
+                                    <p>
+                                    <a href="mailto:huibrandon727@gmail.com" className="email-link">
+                                        my email!
+                                    </a>
+                                    </p>
+                                </>
+                                )}
+                            </div>
+
+                            <div className="panel-buttons">
+                                <div className="clickable-neon-sign" onClick={() => handleTabClick('experience')}>
+                                experience
+                                </div>
+                                <div className="clickable-neon-sign" onClick={() => handleTabClick('about')}>
+                                about
+                                </div>
+                                <div className="clickable-neon-sign" onClick={() => handleTabClick('contact')}>
+                                contact
+                                </div>
+                            </div>
                         </div>
-                    )}
-                    {activeTab === 'about' && (
-                        <div className = "panel-content">
-                            <h2>about me</h2>
-                            <p>Hey! I'm Brandon Hui, a sophomore at the University of Pittsburgh studying computer science and philosophy. I dream of working in software, focusing on mostly backend development, IT, 
-                                and AI. I am currently working on a finance portal for Carnegie Mellon University to allow clubs to be able to interact with their committes and resources.
-                            </p>
-                            <p>Outside of programming, I love to play video games, discover new music, and hanging out with friends! I've recently been addicted to Terraria, and am in the midst of completing the Calamity mod.
-                                I've also rediscovered my love for jazz. Hope you enjoy looking around!
-                            </p>
-                        </div>
-                    )}
-                    {activeTab === 'contact' && (
-                        <div className = "panel-content">
-                            <h2>contact me</h2>
-                            <p>
-                                <a href="mailto:huibrandon727@gmail.com" className = "email-link">
-                                    my email!
-                                </a>
-                            </p>
-                        </div>
-                    )}
-                </div>
+                    </>
                 )}
-                <div className="clickable-buttons">
-                    <div className="clickable-neon-sign" onClick = {() => handleTabClick('experience')}>
-                        experience
-                    </div>
-                    <div className="clickable-neon-sign" onClick = {() => handleTabClick('about')}>
-                        about
-                    </div>
-                    <div className="clickable-neon-sign" onClick = {() => handleTabClick('contact')}>
-                        contact
-                    </div>
-                </div>
             </div>
-        </>
-    )
+        </div>
+    </>
+)
+
 }
 
 export default Header
