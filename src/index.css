@@ -1,3 +1,20 @@
+/* ----------------------- fonts ----------------------- */
+
+@font-face {
+  font-family: 'exosphere';
+  src: url('../fonts/Exosphere.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'jet_set';
+  src: url('../fonts/Jet_Set.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* ----------------------- global styles ----------------------- */
 
@@ -9,8 +26,6 @@ body {
   min-height: 100vh;
   font-family: 'Courier New', Courier, monospace;
 }
-
-
 
 
 /* ----------------------- header signs container ----------------------- */
@@ -25,12 +40,7 @@ body {
 }
 
 
-
-
-
-
 /*  ----------------------- clickable signs container  ----------------------- */
-
 
 .clickable-buttons {
   display: flex;
@@ -39,8 +49,6 @@ body {
   align-items: flex-start;
   flex-shrink: 0;
 }
-
-
 
 
 /*  ----------------------- holo panel container  ----------------------- */
@@ -53,18 +61,16 @@ body {
   gap: 60px;
   width: 100%;
   margin-top: 200px;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 100px auto 0;
 }
 
 
-
 /* ----------------------- neon sign animation for name ----------------------- */
-
 
 /* first name neon sign */
 .neon-sign {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'jet_set';
   font-size: 3rem;
   color: #fff;
   text-shadow:
@@ -120,7 +126,7 @@ body {
 
  /* last name neon sign */
 .broken-neon-sign {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'jet_set';
   font-size: 3rem;
   color: #fff;
   text-shadow:
@@ -182,84 +188,41 @@ body {
 
 /* clickable neon signs */
 .clickable-neon-sign {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'exosphere';
   font-size: 1rem;
-  color: #fff;
+  color: #48ffff;
   text-shadow:
     0 0 5px #00d9ff,
-    0 0 10px #ff00ff,
-    0 0 20px #ff00ff,
-    0 0 40px #ff00ff,
-    0 0 80px #ff00ff;
-  margin: 30px 0;
+    0 0 10px #00ffff;
+  margin: 40px 0;
   padding: 15px 30px;
-  border: 5px solid #00d9ff;
+  border: 1px solid #00d9ff;
   border-radius: 10px;
   box-shadow:
-    0 0 10px #00d9ff,
-    0 0 15px #00d9ff;
+    0 0 10px #00d9ff;
   display: inline-block;
   width: auto;
-  background: rgba(15, 15, 15, 0.8);
+  background: rgba(0, 100, 100, 0.8);
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  animation: flicker 4s infinite;
 }
 
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    text-shadow:
-    0 0 5px #00d9ff,
-    0 0 10px #ff00ff,
-    0 0 20px #ff00ff,
-    0 0 40px #ff00ff,
-    0 0 80px #ff00ff;
-}
-20%, 24%, 55% {
-  opacity: 0.8;
-  text-shadow:
-    0 0 3px #00d9ff,
-    0 0 7px #ff00ff,
-    0 0 15px #ff00ff,
-    0 0 30px #ff00ff,
-    0 0 60px #ff00ff;
-}
-22%, 26% {
-  opacity: 0.6;
-  text-shadow:
-    0 0 2px #00d9ff,
-    0 0 5px #ff00ff,
-    0 0 10px #ff00ff,
-    0 0 20px #ff00ff,
-    0 0 40px #ff00ff;
-  }
-}
 
 
 .clickable-neon-sign:hover {
   transform: scale(1.05);
   box-shadow:
-    0 0 20px #00d9ff,
-    0 0 30px #00d9ff;
+    0 0 10px #00d9ff,
+    0 0 15px #00d9ff;
 }
-
-
-
-
-
-
-
 
 
 /* ----------------------- holo signs for experience/projects ----------------------- */
 
-
-
 .holo-panel {
-  font-family:'Courier New', Courier, monospace;
+  font-family:'jet_set';
   font-size: 1.5rem;
   color: #00d9ff;
   text-shadow:
@@ -274,9 +237,9 @@ body {
     0 0 10px #00d9ff,
     0 0 20px #00d9ff;
   background: rgba(15, 15, 15, 0.8); 
-  width: 1000px;
-  max-width: 1000px;
-  height: 650px;
+  width: 1200px;
+  max-width: 1200px;
+  height: 800px;
   min-height: 400px;
   text-align: center;
   position: static;
@@ -299,7 +262,7 @@ body {
 }
 
 .holo-panel.on {
-  background: rgba(0, 77, 77, 0.8);
+  background: rgba(0, 77, 77, 1);
   box-shadow:
     0 0 10px #00d9ff,
     0 0 20px #00d9ff;
@@ -307,9 +270,14 @@ body {
   transition: all 2s ease;
 }
 
+
+
+
+
 .panel-content {
   animation: swipeIn 0.7s ease-in-out;
 }
+
 
 
 .panel-buttons {
@@ -329,7 +297,7 @@ body {
   gap: 40px;
   margin: auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   height: 100%;
 }
 
@@ -371,37 +339,34 @@ body {
 
 
 .email-link {
-  color:#7c007c;
+  color:#ffffff;
   text-decoration: none;
   font-weight: bold;
   text-shadow:
-    0 0 5px #7c007c;
+    0 0 5px #ffffff;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .email-link:hover {
-  color: #ff00ff;
+  color: #ffffff;
   text-shadow:
-    0 0 10px #ff00ff,
-    0 0 20px #ff00ff,
-    0 0 40px #ff00ff;
+    0 0 10px rgb(0, 247, 255),
+    0 0 20px rgb(0, 247, 255),
+    0 0 40px rgb(0, 247, 255);
 }
-
 
 
 /*  ----------------------- rain animation  ----------------------- */
 
-
-
-
 .rain {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120vh;
+  height: 100%;
   overflow: hidden;
   pointer-events: none;
+  z-index: 9999;
 }
 
 .raindrop {
@@ -425,12 +390,17 @@ body {
   0% {
     transform: translateY(0);
   }
-  60% {
-      transform: translateY(100vh);
-      opacity: 0.5;
-    }
+  75% {
+    transform: translateY(100vh);
+    opacity: 0.5;
+  }
+  76% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
   100% {
-    transform: translateY(130vh);
+    transform: translateY(100vh);
     opacity: 0;
   }
 }
+
