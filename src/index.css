@@ -61,8 +61,8 @@ body {
   gap: 60px;
   width: 100%;
   margin-top: 200px;
-  max-width: 1400px;
-  margin: 100px auto 0;
+  max-width: 1200px;
+  margin: 100px auto 100px;
 }
 
 
@@ -237,9 +237,9 @@ body {
     0 0 10px #00d9ff,
     0 0 20px #00d9ff;
   background: rgba(15, 15, 15, 0.8); 
-  width: 1200px;
-  max-width: 1200px;
-  height: 800px;
+  width: 1100px;
+  max-width: 1100px;
+  height: 750px;
   min-height: 400px;
   text-align: center;
   position: static;
@@ -271,13 +271,9 @@ body {
 }
 
 
-
-
-
 .panel-content {
   animation: swipeIn 0.7s ease-in-out;
 }
-
 
 
 .panel-buttons {
@@ -289,7 +285,6 @@ body {
 }
 
 
-
 .panel-inner {
   display: flex;
   justify-content: center;
@@ -297,7 +292,7 @@ body {
   gap: 40px;
   margin: auto;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1050px;
   height: 100%;
 }
 
