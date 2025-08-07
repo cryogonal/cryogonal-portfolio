@@ -15,6 +15,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'helios';
+  src: url('../fonts/Helios_Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* ----------------------- global styles ----------------------- */
 
@@ -66,7 +73,7 @@ body {
 }
 
 
-/* ----------------------- neon sign animation for name ----------------------- */
+/* ----------------------- neon sign animation for name/signs ----------------------- */
 
 /* first name neon sign */
 .neon-sign {
@@ -219,7 +226,10 @@ body {
 }
 
 
-/* ----------------------- holo signs for experience/projects ----------------------- */
+
+
+
+/* ----------------------- holo panel ----------------------- */
 
 .holo-panel {
   font-family:'jet_set';
@@ -348,6 +358,93 @@ body {
     0 0 10px rgb(0, 247, 255),
     0 0 20px rgb(0, 247, 255),
     0 0 40px rgb(0, 247, 255);
+}
+
+.github-link {
+  font-family: 'helios';
+  color: #00d9ff;
+  text-decoration: underline;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.github-link:hover {
+  text-shadow:
+    0 0 10px rgb(0, 210, 218),
+    0 0 17px rgb(0, 210, 218),
+    0 0 25px rgb(0, 210, 218);
+}
+
+.resume-link {
+  font-family: 'jet_set';
+  color: #00d9ff;
+  text-decoration: underline;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.resume-link:hover {
+  text-shadow:
+    0 0 10px rgb(0, 210, 218),
+    0 0 17px rgb(0, 210, 218),
+    0 0 25px rgb(0, 210, 218);
+}
+
+.intro-message {
+  font-family: 'jet_set';
+  color: #00d9ff;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #00a5c2;
+  animation: fadeInOut 2.5s ease-in-out;
+  text-align: center;
+  padding: 40px;
+}
+
+.fade-in-main {
+  animation: fadeInMain 0.5s ease-in forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInMain {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutMain {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.header-font {
+  font-family: 'helios';
+}
+
+
+.fade-out-main {
+  animation: fadeOutMain 0.25s ease-in forwards;
 }
 
 
