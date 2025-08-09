@@ -42,7 +42,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;
+  gap: 60px;
   margin-top: 60px;
 }
 
@@ -68,7 +68,7 @@ body {
   gap: 60px;
   width: 100%;
   margin-top: 200px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 100px auto 100px;
 }
 
@@ -78,7 +78,7 @@ body {
 /* first name neon sign */
 .neon-sign {
   font-family: 'jet_set';
-  font-size: 3rem;
+  font-size: 4rem;
   color: #fff;
   text-shadow:
     0 0 5px #00d9ff,
@@ -134,7 +134,7 @@ body {
  /* last name neon sign */
 .broken-neon-sign {
   font-family: 'jet_set';
-  font-size: 3rem;
+  font-size: 4rem;
   color: #fff;
   text-shadow:
     0 0 5px #00d9ff,
@@ -196,20 +196,20 @@ body {
 /* clickable neon signs */
 .clickable-neon-sign {
   font-family: 'exosphere';
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #48ffff;
   text-shadow:
     0 0 5px #00d9ff,
     0 0 10px #00ffff;
-  margin: 40px 0;
-  padding: 15px 30px;
+  margin: 60px 0;
+  padding: 23px 40px;
   border: 1px solid #00d9ff;
   border-radius: 10px;
   box-shadow:
     0 0 10px #00d9ff;
   display: inline-block;
   width: auto;
-  background: rgba(0, 100, 100, 0.8);
+  background: rgba(0, 80, 80, 0.8);
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
@@ -233,7 +233,7 @@ body {
 
 .holo-panel {
   font-family:'jet_set';
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #00d9ff;
   text-shadow:
     0 0 5px #00778b,
@@ -247,9 +247,9 @@ body {
     0 0 10px #00d9ff,
     0 0 20px #00d9ff;
   background: rgba(15, 15, 15, 0.8); 
-  width: 1100px;
-  max-width: 1100px;
-  height: 750px;
+  width: 1400px;
+  max-width: 1400px;
+  height: 900px;
   min-height: 400px;
   text-align: center;
   position: static;
@@ -302,7 +302,7 @@ body {
   gap: 40px;
   margin: auto;
   width: 100%;
-  max-width: 1050px;
+  max-width: 1200px;
   height: 100%;
 }
 
