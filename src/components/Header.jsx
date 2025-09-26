@@ -51,12 +51,17 @@ function Header() {
                 onClick={!hasClickedPanel ? handlePanelClick : undefined}
                 style={{ cursor: !hasClickedPanel ? 'pointer' : 'default' }}
             >
+                {!hasClickedPanel && (
+                    <div className = "click-here">
+                        click here :D
+                    </div>
+                )}
 
                 {hasClickedPanel && (
                     <>
                     {showIntroMessage && (
                         <div className = "intro-message">
-                            Welcome...
+                            Welcome!
                         </div>
                     )}
                     {showMainContent && (
@@ -130,5 +135,7 @@ function Header() {
 )
 
 }
+
+
 
 export default Header

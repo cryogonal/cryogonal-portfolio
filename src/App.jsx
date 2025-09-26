@@ -1,13 +1,15 @@
 import Header from './components/Header'
-import Footer from './components/Footer'
+// import Skyline from './components/Skyline'
+import PixelCity from './components/PixelCity'
 import Rain from './components/Rain'
 
 function App() {
   return (
     <>
-      <Rain />
+      <PixelCity />
       <Header />
-      <Footer />
+      <canvas id="cityCanvas" className="city-canvas"></canvas>
+      <Rain />
     </>
   );
 }

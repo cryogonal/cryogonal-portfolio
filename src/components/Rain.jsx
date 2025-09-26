@@ -4,8 +4,8 @@ function Rain() {
         for (let i = 0; i < count; i++) {
           drops.push(<div key={`${className}-${i}`} className={`raindrop ${className}`} style={{
             left: `${Math.random() * 100}vw`,
-            animationDelay: `${-Math.random() * 2}s`,
-            animationDuration: `${0.6 + Math.random() * 2}s`,
+            animationDelay: `${-Math.random() * 1}s`,
+            animationDuration: `${0.6 + Math.random() * 1}s`,
             opacity: opacity
           }}></div>);
         }
